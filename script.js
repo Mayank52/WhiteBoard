@@ -77,6 +77,9 @@ function redraw() {
   }
   ctx.strokeStyle = currStrokeStyle;
   ctx.lineWidth = currLineWidth;
+
+  console.log("calling redraw");
+  socket.emit("redraw", points);
 }
 
 function undoPoints() {
